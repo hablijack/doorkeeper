@@ -1,0 +1,70 @@
+/* Small Devices, Tablets */
+@media only screen and (min-width : 992px) {
+    .menu-left {
+        border:1px solid #14161C;
+        border-radius:4px;
+        box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.4), 0px 1px 2px 0px rgba(255,255,255,0.2);
+        padding-left: 0px;
+    }
+
+    .menu-left li {
+        background-color: #3b3f4d;
+        list-style: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-bottom: 1px solid #323641;
+    }
+
+    .menu-left li:first-child {
+        border-radius: 4px 4px 0px 0px;
+    }
+    .menu-left li:last-child {
+        border-radius: 0px 0px 4px 4px;
+    }
+
+
+    .menu-left li.active, .menu-left li:hover {
+        background-color: #8f4949;
+    }
+
+
+    .menu-left li a {
+        padding-left: 20px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        line-height: 60px;
+        display: block;
+    }
+    .menu-left li a .glyphicon {
+        margin-right: 10px;
+    }
+
+    .menu-left li.active {
+        box-shadow: inset 0px 1px 2px 0px rgba(255,255,255,0.2), 0px 2px 2px 0px rgba(0,0,0,0.3);
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .menu-left {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border: 1px solid white;
+        height: 30px;
+        display: inline-block
+    }
+    .menu-left li {
+        float: left;
+        border-left: 1px solid white;
+        padding: 5px;
+    }
+    .menu-left li a {
+        color: white;
+        margin-left: 10px;
+        margin: 5px;
+    }
+}

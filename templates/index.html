@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./favicon.ico">
+
+    <title>:: Doorkeeper ::</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Orbitron" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/starter-template.css" rel="stylesheet">
+    <link href="./assets/css/navigation.css" rel="stylesheet">
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="container-full">
+    <div class="col-md-2">
+        <div class="brand">
+            <div class="logo">
+                <span class="glyphicon glyphicon-eye-open"></span>
+            </div>
+            <div class="logo-text">
+                Doorkeeper
+            </div>
+        </div>
+        <ul id="menu" class="menu-left">
+            <li class="active">
+                <a href="index.html">
+                    <span class="glyphicon glyphicon glyphicon-home"></span>
+                    Übersicht
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <div class="content">
+            <div class="content-head">
+		Übersicht
+            </div>
+            <div class="content-body">
+                <div class="streams">
+                    <h3>Live</h3>
+                    <img src="http://192.168.178.43/mjpegstream.cgi?-chn=11&-usr=admin&pwd=W2kXPSP2" height="300" class="mini-livestream">
+                </div>
+                <h3>Bekannte Personen</h3>
+                <div class="detected-faces">
+                    {% for face in known_faces %}
+                      <img src="/known_faces/{{ face }}" width="150">
+                    {% endfor %}
+                </div>
+                <h3>Unbekannte Personen</h3>
+                <div class="detected-faces">
+                    {% for face in unknown_faces %}
+                      <img src="/unknown_faces/{{ face }}" width="150">
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
